@@ -2,7 +2,7 @@ let connections = {}; // Keep track of connected ports
 let socket;
 
 function connectToChatServer() {
-    socket = new WebSocket('ws://localhost:8080');
+    socket = new WebSocket('ws://3.39.252.251:5173');
 
     socket.onopen = () => {
         console.log('Connected to chat server');
