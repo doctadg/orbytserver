@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Orbyt Chat",
+  "version": "1.0",
+  "description": "A chatroom extension.",
+  "permissions": [
+    "sidePanel",
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "icons": {
+    "16": "public/orbytlogo.jpg",
+    "48": "public/orbytlogo.jpg",
+    "128": "public/orbytlogo.jpg"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.dexscreener.com/*", "*://*.birdeye.so/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
